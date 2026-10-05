@@ -9,8 +9,18 @@ public class EjercicioCooperativa {
         double totalPagado=0.0,promedio=0.0,pagoMayor=0.0;
         int tipoCafe,nroBono=0,nroStd=0,nroOrg=0;
 
-        System.out.println("Ingresa la cantidad de productores");
-        numeroProductores=lector.nextInt();
+
+        do{
+            System.out.println("Ingresa la cantidad de productores");
+            numeroProductores=lector.nextInt();
+            if(numeroProductores<=0){
+                System.out.println("Debe ser mayor a cero");
+            }
+        }while(numeroProductores<=0);
+
+
+
+
 
         for(int i=1;i<=numeroProductores;i++){
             System.out.println("_______________________________");
@@ -62,8 +72,6 @@ public class EjercicioCooperativa {
                 pagoMayor=pagoFinal;
                 nombreMayor=nombre;
             }
-
-
 
             totalPagado=totalPagado+pagoFinal;
 
